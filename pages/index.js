@@ -10,7 +10,7 @@ export default function Home() {
       <meta keywords="lel" content="lol"></meta>
     </Head>
     <div>
-      <h1 className={styles.title}>Homepage</h1>
+      <h1 className={styles.title}>Manchester City FC</h1>
       <p className={styles.text}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, accusantium.</p>
       <p className={styles.text}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus iste a quos assumenda recusandae cum voluptatum. Perferendis sunt omnis eius.</p>
       <Link href="/players"><a className={styles.btn}>See all Players</a></Link>
