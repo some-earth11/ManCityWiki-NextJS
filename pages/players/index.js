@@ -16,6 +16,7 @@ const Players = ({ players} ) => {
     return ( 
         <div>
             <h1>All Players</h1>
+            <h3>PS: Dummy Players to check API functionality</h3>
             {players.map(player => (
                 <Link href={'/players/' + player.id} key={player.id}>
                     <a className={styles.single}>
