@@ -15,25 +15,25 @@ export const getStaticPaths = async () => {
     }
   }
   
-  export const getStaticProps = async (context) => {
-    const id = context.params.id;
-    const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
-    const data = await res.json();
-  
-    return {
-      props: { player: data }
-    }
+export const getStaticProps = async (context) => {
+  const id = context.params.id;
+  const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id);
+  const data = await res.json();
+
+  return {
+    props: { player: data }
   }
+}
+
+const Details = ({ player }) => {
+  return (
+    <div>
+      <h1>{ player.name }</h1>
+      <p>{ player.email }</p>
+      <p>{ player.website }</p>
+      <p>{ player.address.city }</p>
+    </div>
+  );
+}
   
-  const Details = ({ player }) => {
-    return (
-      <div>
-        <h1>{ player.name }</h1>
-        <p>{ player.email }</p>
-        <p>{ player.website }</p>
-        <p>{ player.address.city }</p>
-      </div>
-    );
-  }
-  
-  export default Details;
+export default Details;
